@@ -1,0 +1,21 @@
+{
+  "name": "react-superhereos-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "^1.1.1",
+    "uniqid": "^4.1.1"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run start-react\" \"npm run json-server\"",
+    "start-react": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "json-server": "json-server -p 3001 --watch db.json"
+  }
+}
